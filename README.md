@@ -51,33 +51,11 @@ Projeto de **Atividade Extensionista II: Tecnologia Aplicada à Inclusão Digita
 
 ![Diagrama da metodologia](metodologia/diagrama_metodologia.png)
 
-## Como usar
+## Como a oficina usa este material
 
-### Participantes (no Colab)
-Clique no botão **Abrir no Colab** no topo de cada notebook e depois em **Arquivo → Salvar uma cópia no Drive**.
+**Estudantes:** recebem no chat do Meet o link do notebook de cada encontro, abrem no Google Colab e salvam uma cópia no próprio Drive. Não precisam instalar nada.
 
-### Rodar localmente
-```bash
-pip install -r requirements.txt
-python exercicios/gabarito.py
-```
-
-### Analisar os questionários
-1. Exporte as respostas de cada formulário do Google Forms em CSV.
-2. Garanta que as colunas tenham os nomes curtos descritos em `avaliacao/questionario_*.md` (ou ajuste o dicionário `RENOMEAR` no script).
-3. Execute:
-```bash
-cd avaliacao
-python analise_questionarios.py --pre diagnostico.csv --pos final.csv --saida resultados
-```
-O script gera `resumo_resultados.md`, `autoavaliacao_antes_depois.png` e `quiz_antes_depois.png`.
-
-Para testar com os dados fictícios:
-```bash
-python analise_questionarios.py --pre exemplo_ficticio/diagnostico.csv --pos exemplo_ficticio/final.csv --saida resultados_exemplo
-```
-
-> ⚠️ Os arquivos em `exemplo_ficticio/` são inventados e servem **apenas** para testar o script. Os resultados reais da oficina devem vir das respostas reais dos participantes.
+**Avaliação:** antes do primeiro e depois do último encontro, os estudantes respondem aos questionários de `avaliacao/` pelo Google Forms. O script `avaliacao/analise_questionarios.py` compara as respostas de cada participante (autoavaliação e questões de conhecimento) e gera os indicadores e gráficos apresentados no relatório final. Os arquivos em `avaliacao/exemplo_ficticio/` contêm dados inventados, usados apenas para testar o script.
 
 ## Privacidade
 Os participantes são identificados apenas por um código escolhido por eles; nenhum nome, telefone ou e-mail é publicado neste repositório.
