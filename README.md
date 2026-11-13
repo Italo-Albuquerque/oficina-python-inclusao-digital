@@ -56,8 +56,6 @@ Projeto de **Atividade Extensionista II: Tecnologia Aplicada à Inclusão Digita
 ### Participantes (no Colab)
 Clique no botão **Abrir no Colab** no topo de cada notebook e depois em **Arquivo → Salvar uma cópia no Drive**.
 
-> Depois de publicar o repositório, troque `SEU_USUARIO` pelo seu usuário do GitHub nos links dos notebooks (basta usar *Localizar e substituir*).
-
 ### Rodar localmente
 ```bash
 pip install -r requirements.txt
