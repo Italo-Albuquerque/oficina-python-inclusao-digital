@@ -1,0 +1,47 @@
+// Diagrama de rede da metodologia do projeto
+// Gerar a imagem: dot -Tpng -Gdpi=200 diagrama_metodologia.dot -o diagrama_metodologia.png
+digraph metodologia {
+  rankdir=TB;
+  nodesep=0.35;
+  ranksep=0.38;
+  splines=ortho;
+  fontname="Helvetica";
+  node [shape=box, style="rounded,filled", fillcolor="#EAF1FB", color="#1F4E8C",
+        fontname="Helvetica", fontsize=11, penwidth=1.3, margin="0.15,0.07"];
+  edge [color="#1F4E8C", arrowsize=0.7, penwidth=1.1];
+
+  inicio [label="Início do\nprojeto", shape=ellipse, fillcolor="#1F4E8C", fontcolor="white"];
+  fim    [label="Fim do\nprojeto",    shape=ellipse, fillcolor="#1F4E8C", fontcolor="white"];
+
+  A [label=<<b>Atividade A</b><br/>Planejamento e definição<br/>do público-alvo<br/><font color="#B03A2E">Duração: 5 dias</font>>];
+  B [label=<<b>Atividade B</b><br/>Divulgação nas escolas e<br/>inscrições (Google Forms)<br/><font color="#B03A2E">Duração: 7 dias</font>>];
+  C [label=<<b>Atividade C</b><br/>Elaboração do material<br/>didático (notebooks Colab)<br/><font color="#B03A2E">Duração: 10 dias</font>>];
+  D [label=<<b>Atividade D</b><br/>Questionário diagnóstico<br/>de nivelamento<br/><font color="#B03A2E">Duração: 2 dias</font>>];
+  E [label=<<b>Atividade E</b><br/>Teste do Google Meet e<br/>do ambiente Colab<br/><font color="#B03A2E">Duração: 1 dia</font>>];
+
+  subgraph cluster_oficina {
+    label=<<b>Oficina on-line via Google Meet (4 encontros síncronos)</b>>;
+    fontsize=11; fontcolor="#1F4E8C"; color="#1F4E8C"; style="dashed,rounded"; margin=10;
+    F [label=<<b>Atividade F</b><br/>Encontro 1:<br/>Letramento digital<br/><font color="#B03A2E">Duração: 2 h</font>>, fillcolor="#FFF4DC"];
+    G [label=<<b>Atividade G</b><br/>Encontro 2:<br/>Python básico<br/><font color="#B03A2E">Duração: 2 h</font>>, fillcolor="#FFF4DC"];
+    H [label=<<b>Atividade H</b><br/>Encontro 3: Lógica,<br/>condicionais e laços<br/><font color="#B03A2E">Duração: 2 h</font>>, fillcolor="#FFF4DC"];
+    I [label=<<b>Atividade I</b><br/>Encontro 4:<br/>Automação de dados<br/><font color="#B03A2E">Duração: 2 h</font>>, fillcolor="#FFF4DC"];
+    {rank=same; F; G; H; I;}
+  }
+
+  J [label=<<b>Atividade J</b><br/>Questionário final e<br/>avaliação da oficina<br/><font color="#B03A2E">Duração: 2 dias</font>>];
+  K [label=<<b>Atividade K</b><br/>Análise dos resultados<br/>(script Python)<br/><font color="#B03A2E">Duração: 3 dias</font>>];
+  L [label=<<b>Atividade L</b><br/>Edição do vídeo e<br/>publicação no GitHub<br/><font color="#B03A2E">Duração: 3 dias</font>>];
+  M [label=<<b>Atividade M</b><br/>Elaboração do<br/>relatório final<br/><font color="#B03A2E">Duração: 2 dias</font>>];
+
+  inicio -> A;
+  A -> B; A -> C;
+  B -> D;
+  C -> E; D -> E;
+  E -> F;
+  F -> G -> H -> I;
+  I -> J;
+  J -> K; J -> L;
+  K -> M; L -> M;
+  M -> fim;
+}
