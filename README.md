@@ -11,7 +11,7 @@ Projeto de **Atividade Extensionista II: Tecnologia Aplicada à Inclusão Digita
 
 ## Objetivos
 
-- Diagnosticar o conhecimento prévio dos participantes em informática, navegação na web e lógica, com um questionário de nivelamento.
+- Acompanhar as dificuldades dos participantes com informática, navegação na web e lógica, adaptando o ritmo dos encontros.
 - Desenvolver material didático prático em Python, usando notebooks do Google Colab.
 - Capacitar os estudantes na resolução de problemas lógicos e na automação básica de dados, promovendo a inclusão digital e o interesse pelas áreas STEM.
 
@@ -26,11 +26,6 @@ Projeto de **Atividade Extensionista II: Tecnologia Aplicada à Inclusão Digita
 │   └── 04_automacao_dados.ipynb
 ├── exercicios/
 │   └── gabarito.py                   # soluções comentadas dos exercícios
-├── avaliacao/
-│   ├── questionario_diagnostico.md   # aplicado antes da oficina (Google Forms)
-│   ├── questionario_final.md         # aplicado depois da oficina (Google Forms)
-│   ├── analise_questionarios.py      # compara antes x depois e gera gráficos
-│   └── exemplo_ficticio/             # dados FICTÍCIOS só para testar o script
 ├── metodologia/
 │   ├── diagrama_metodologia.dot      # fonte do diagrama (Graphviz)
 │   └── diagrama_metodologia.png
@@ -55,10 +50,10 @@ Projeto de **Atividade Extensionista II: Tecnologia Aplicada à Inclusão Digita
 
 **Estudantes:** recebem no chat do Meet o link do notebook de cada encontro, abrem no Google Colab e salvam uma cópia no próprio Drive. Não precisam instalar nada.
 
-**Avaliação:** antes do primeiro e depois do último encontro, os estudantes respondem aos questionários de `avaliacao/` pelo Google Forms. O script `avaliacao/analise_questionarios.py` compara as respostas de cada participante (autoavaliação e questões de conhecimento) e gera os indicadores e gráficos apresentados no relatório final. Os arquivos em `avaliacao/exemplo_ficticio/` contêm dados inventados, usados apenas para testar o script.
+**Gabarito:** as soluções comentadas dos exercícios estão em `exercicios/gabarito.py`.
 
 ## Privacidade
-Os participantes são identificados apenas por um código escolhido por eles; nenhum nome, telefone ou e-mail é publicado neste repositório.
+Nenhum nome, telefone ou e-mail dos participantes é publicado neste repositório.
 
 ## Licença
 [MIT](LICENSE)
